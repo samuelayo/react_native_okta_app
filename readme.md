@@ -73,6 +73,43 @@ $ react-native run-android
 
 To build for iOS
 
+- Navigate to the iOS folder
+
+- install cocoapods 
+
+```
+sudo gem install cocoapods
+```
+
+- Create a `Podfile` and paste
+
+```
+platform :ios, '11.0'
+    
+target 'react_native_okta_app' do
+    pod 'AppAuth', '>= 0.95'
+end
+```
+    
+
+Run `pod install`. If you encounter any error, run `pod repo update`. 
+If there are no errors, open the `react_native_okta_app.xcworkspace` and edit the `AppDelegate.h` file.
+
+```
+#import <UIKit/UIKit.h>
+#import "RNAppAuthAuthorizationFlowManager.h"
+    
+@interface AppDelegate : UIResponder <UIApplicationDelegate, RNAppAuthAuthorizationFlowManager>
+    
+@property (nonatomic, weak) id<RNAppAuthAuthorizationFlowManagerDelegate>authorizationFlowManagerDelegate;
+    
+@property (nonatomic, strong) UIWindow *window;
+    
+@end
+
+```
+
+
 ```
 $ react-native run-ios
 ```
