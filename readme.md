@@ -3,7 +3,7 @@
 While building applications, authentication is usually a very important aspect because this is how you identify every user and it can sometimes be tedious. This problem is what Authentication Service Providers solve. They provide authentication and user management services for applications and sometimes easily configurable functionalities such as the login, log out, social media integration, etc. and they support authentication protocols such as `OpenID Connect` and `SMAL`.
 
 
-[View tutorial](#)
+[View tutorial](https://pusher.com/tutorials/authentication-react-native-okta)
 
 ## Getting Started
 Clone the project repository by running the command below if you use SSH
